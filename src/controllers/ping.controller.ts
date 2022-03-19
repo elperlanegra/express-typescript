@@ -1,7 +1,7 @@
-import { Get, Route } from 'tsoa';
+import { Get, Route } from "tsoa";
 
 interface PingResponse {
-    mesage: string;
+    message: string;
 }
 
 @Route("ping")
@@ -9,7 +9,7 @@ export default class PingController {
     @Get("/")
     public async getMessage(): Promise<PingResponse> {
         return {
-            mesage: 'pong',
+            message: "pong",
         };
     }
 }
