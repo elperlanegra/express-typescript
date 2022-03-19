@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.use(express.static("public"));
 
-
 app.use(
     "/docs",
     swaggerUi.serve,
