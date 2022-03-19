@@ -26,12 +26,15 @@ app.use(
     })
 )
 
-app.use(Router)
+app.use(Router);
 
 createConnection(dbConfig)
     .then((_connection) => {
         app.listen(PORT, () => {
             console.log("Server is running on port", PORT);
+            if (_connection !== null) {
+                console.log("Database connection is successful");
+            }
         });
     })
     .catch((err) => {
